@@ -1,4 +1,4 @@
 import React from 'react'
 import { BaseContainer } from '../BaseContainer'
 
-export const Address = props => <BaseContainer as="address" {...props} />
+export const Header = props => <BaseContainer as="header" {...props} />
