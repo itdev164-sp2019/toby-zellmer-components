@@ -11,20 +11,17 @@ const Outer = styled(Box)`
     margin-bottom: 1.45rem;
 `
 
+const StyledLink = styled(Link)`
+    color: whote;
+    text-decoration: none;
+`
+
 export const Masthead = ({ height, siteTitle }) => {
     return (
         <Outer height={height}>
-         <Link
-            href="/"
-            style={{
-                color: `white`,
-                textDecoration: `none`
-            }}
-         >
-            {siteTitle}
-        </Link>
-    </Outer>
-        )
+            <StyledLink href="/"{siteTitle}</StyledLink>
+        </Outer>
+    )
 }
 
 Masthead.propTypes = {
