@@ -1,0 +1,8 @@
+{
+    "env": {},
+    "dependencies": {
+        "bit.envs/compilers/react": "0.0.14"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+}
