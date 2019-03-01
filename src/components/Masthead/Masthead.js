@@ -11,7 +11,7 @@ const Outer = styled(Box)`
     margin-bottom: 1.45rem;
 `
 
-export const Masthhead = ({ height, siteTitle }) = {
+export const Masthead = ({ height, siteTitle }) => {
     return (
         <Outer height={height}>
          <Link
@@ -19,12 +19,12 @@ export const Masthhead = ({ height, siteTitle }) = {
             style={{
                 color: `white`,
                 textDecoration: `none`
-         }}
+            }}
          >
             {siteTitle}
         </Link>
     </Outer>
-    )
+        )
 }
 
 Masthead.propTypes = {
