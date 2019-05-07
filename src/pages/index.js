@@ -21,6 +21,12 @@ const IndexPage = () => (
       <Button variant="primary">My Custom Button!</Button>
       <IconButton icon={<Search />} />
     </Section>
+    <ShareButtonList
+      addThisPubId='ra-5cca51cfb6e8e8c1'
+      contentTitle='Fake title'
+      contentImage='http://placekitten.com/g/300/700'
+      contentDescription='Here is some stuff about Besian, and maybe kittens.'
+    />
   </Layout>
 )
 

@@ -1,10 +1,16 @@
 import React from 'react'
 import { darken } from 'polished'
 import mastheadImage from './images/styled-components.png'
+import shareFacebookImage from './images/share_facebook.png'
+import shareTwitterImage from './images/share_twitter.png'
+import shareMoreImage from './images/share_more.png'
 import { Menu, Search } from 'styled-icons/feather'
 
 const images = {
-    mastheadImage
+    mastheadImage,
+    shareFacebookImage,
+    shareTwitterImage,
+    shareMoreImage
 }
 
 const icons = {
@@ -12,7 +18,10 @@ const icons = {
     Search: <Search />
 }
 
+const breakpoints = [576, 768, 900]
+
 const theme = {
+    breakpoints: [...breakpoints],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   lineHeights: {
     solid: 1,
@@ -48,7 +57,19 @@ const theme = {
       disabled: 'hsl(208, 13%, 75%)',
       hint: 'hsl(208, 13%, 75%)'
     }
-  }
+  },
+    media: {
+        sizes: {
+            deskptop: breakpoints[2],
+            tablet: breakpoints[1],
+            phone: breakpoints[0]
+        }
+    },
+    transitions: {
+        short: 'all 0.3s ease-out',
+        medium: 'all 0.6s ease-out',
+        long: 'all 0.9s ease-out'
+    }
 }
 
 const defaults = {
@@ -58,6 +79,9 @@ const defaults = {
     textTransform: 'uppercase',
     letterSpacing: theme.letterSpacings.tracked
   },
+    link: {
+      textDecoration: 'none'  
+    },
     masthead: {
         height: '100%',
         width: '100%',
@@ -67,6 +91,12 @@ const defaults = {
     },
     text: {
         lineHeight: theme.lineHeights.copy
+    },
+    socialShareButton: {
+        img: {
+            width: '100px',
+            height: 'auto'
+        }
     }
 };
 
@@ -91,6 +121,16 @@ const variants = {
       color: theme.colors.primary.contrastText
     }
   },
+    link: {
+    primary: {
+      ...defaults.link,
+      color: theme.colors.primary.main
+    },
+    contrast: {
+      ...defaults.link,
+      color: theme.colors.primary.contrastText
+    }
+  },
   linkButton: {
     primary: {
       color: theme.colors.primary.main
@@ -98,7 +138,15 @@ const variants = {
     contrast: {
       color: theme.colors.primary.contrastText
     }
-  }
+  },
+    mastheadDrawer: {
+        primary: {
+            background: theme.colors.primary.main
+        },
+        contrast: {
+            background: theme.colors.primary.contrastText
+        }
+    }
 }
 
 const Gray = {...theme, defaults, variants, images, icons};

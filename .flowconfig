@@ -1,0 +1,17 @@
+[ignore]
+.*/.cache/.*
+.*/__tests__/.*
+.*/node_modules/.*\.json$
+.*/node_modules/.*[^e]\.json$
+.*/node_modules/.*\(lib\|test\).*\.json$
+
+[include]
+.*/src/.*
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
